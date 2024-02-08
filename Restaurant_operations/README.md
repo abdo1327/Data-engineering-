@@ -14,7 +14,7 @@ This project presents a practical application of data engineering concepts withi
 
 1. **Database Design**: Defined a relational database schema tailored to the needs of a restaurant, considering factors such as table relationships, normalization, and data integrity.
 
-2. **Data Modeling**: Created tables to represent essential entities in the restaurant domain, including menus, orders, customers, and bookings.
+2. **Data Modeling**: Utilized MySQL Workbench to visually design the database schema, represented by the Entity-Relationship Diagram (ER.png). The final database created may differ slightly from the initial conceptual design based on practical considerations and requirements.
 
 3. **Stored Procedures**: Implemented stored procedures to encapsulate complex SQL logic within the database, promoting modularity, security, and performance.
 
@@ -38,4 +38,4 @@ This project presents a practical application of data engineering concepts withi
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License].
