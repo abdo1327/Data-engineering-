@@ -35,4 +35,4 @@ This project presents a practical application of data engineering concepts withi
 
 ## License
 
-This project is licensed under the [MIT License].
+This project is licensed under the MIT.
