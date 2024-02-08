@@ -26,9 +26,6 @@ This project presents a practical application of data engineering concepts withi
 
 - **Data Integrity Constraints**: Enforced data integrity through the implementation of primary keys, foreign keys, unique constraints, and other integrity constraints.
 
-- **Transaction Management**: Implemented transactions to maintain data consistency and integrity, especially in scenarios involving multiple database operations.
-
-- **Error Handling**: Employed error handling mechanisms in both SQL and Python to gracefully handle exceptions and ensure robustness of database operations.
 
 ## Future Enhancements
 
