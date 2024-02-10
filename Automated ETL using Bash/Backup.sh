@@ -18,22 +18,18 @@ then
   exit
 fi
 
-# [TASK 1]
 # Set targetDirectory to the first command line argument
 # Set destinationDirectory to the second command line argument
 targetDirectory=$1
 destinationDirectory=$2
 
-# [TASK 2]
 # Display the values of targetDirectory and destinationDirectory
 echo "Target Directory: $targetDirectory"
 echo "Destination Directory: $destinationDirectory"
 
-# [TASK 3]
 # Get the current timestamp in seconds
 currentTS=`date +%s`
 
-# [TASK 4]
 # Generate a backup file name based on the current timestamp
 backupFileName="backup-$currentTS.tar.gz"
 
@@ -44,22 +40,18 @@ backupFileName="backup-$currentTS.tar.gz"
 
 # To make things easier, we will define some useful variables...
 
-# [TASK 5]
 # Get the absolute path of the current directory
 origAbsPath=`pwd`
 
-# [TASK 6]
 # Change to the destination directory
 cd "$destinationDirectory"  # <-
 destDirAbsPath=`pwd`
 
-# [TASK 7]
 # Change back to the original directory
 cd "$origAbsPath" # <-
 # Change to the target directory
 cd "$targetDirectory" # <-
 
-# [TASK 8]
 # Calculate the timestamp for the same time on the previous day
 yesterdayTS=$(($currentTS - 86400))
 
@@ -69,21 +61,17 @@ declare -a toBackup
 # Iterate over files in the target directory
 for file in $(ls) # [TASK 9]
 do
-  # [TASK 10]
   # Check if the modification timestamp of the file is later than the timestamp for the same time on the previous day
   if ((`date -r $file +%s` > $yesterdayTS))
   then
-    # [TASK 11]
     # Add the file to the array for backup
     toBackup+=($file)
   fi
 done
 
-# [TASK 12]
 # Compress and archive the files listed in toBackup
 tar -czvf $backupFileName ${toBackup[@]}
 
-# [TASK 13]
 # Move the backup file to the destination directory
 mv $backupFileName $destDirAbsPath/
 
